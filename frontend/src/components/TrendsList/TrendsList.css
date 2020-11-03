@@ -1,0 +1,20 @@
+.trendsList {
+  padding: 10px;
+  position: relative;
+}
+
+.trendsList__body {
+  padding: 15px;
+}
+
+.trendsList__icon {
+  position: absolute;
+  top: 10;
+  right: 0;
+  color: gray;
+}
+
+.trendsList__contents {
+  /* padding: 10px; */
+  margin-top: -5px;
+}
