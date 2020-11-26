@@ -10,7 +10,7 @@ import User from '../models/userModel.js';
  * @access public
  */
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, image } = req.body;
 
   const userExist = await User.findOne({ email });
   if (userExist) {
@@ -22,6 +22,7 @@ const registerUser = asyncHandler(async (req, res) => {
     name,
     email,
     password,
+    image,
   });
 
   // getSignedJwtToken from userSchema.methods in user model
