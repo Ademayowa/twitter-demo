@@ -1,35 +1,27 @@
 import React from 'react';
-import SettingsIcon from '@material-ui/icons/Settings';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-
-import Title from '../Title/Title';
 import TrendsList from '../TrendsList/TrendsList';
+import Title from '../Title/Title';
+import { HiCog } from 'react-icons/hi';
 import './Trends.css';
 
 const Trends = () => {
   return (
     <div className='trends'>
-      <Title Icon={SettingsIcon} title='Trends for you' />
-      <hr />
+      <Title Icon={HiCog} title='Trends for you' />
       <TrendsList
-        Icon={KeyboardArrowDownIcon}
-        text='Music . Trending'
-        heading='Burna'
-        info='166k Tweets'
+        text='Burna · Boy'
+        heading='latest tweets today'
+        info='This is how we do'
       />
-      <hr />
       <TrendsList
-        Icon={KeyboardArrowDownIcon}
-        text='Trending in Nigeria'
-        heading='#IkoroduProtest'
-        info='21.5k Tweets'
+        text='education · trending'
+        heading='NANS'
+        info='116k tweets'
       />
-      <hr />
       <TrendsList
-        Icon={KeyboardArrowDownIcon}
-        text='Hip hop . Trending'
-        heading='Burna boy'
-        info='78.5k Tweets'
+        text='football · trending'
+        heading='Ronaldo'
+        info='278k tweets'
       />
     </div>
   );

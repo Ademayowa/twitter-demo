@@ -1,24 +1,18 @@
 import React from 'react';
+import { RiArrowDownSLine } from 'react-icons/ri';
 import './TrendsList.css';
 
-const TrendsList = ({ title, Icon, text, heading, info }) => {
+const TrendsList = ({ title, text, heading, info }) => {
   return (
     <div className='trendsList'>
-      <div className='trendsList__body'>
-        <div className='trendsList__contents'>
-          <div className='trendsList__icon'>
-            <Icon />
-          </div>
-
-          <div className='trendsList__top'>
-            <p>{text}</p>
-          </div>
-          <div className='trendsList__center'>
-            <h4>{heading}</h4>
-          </div>
-          <div className='trendsList__bottom'>
-            <p>{info}</p>
-          </div>
+      <div className='triendsList__body'>
+        <RiArrowDownSLine className='trendsList__icon' />
+        <div className='trendsList__top'>
+          <h6>{text}</h6>
+          <p className='font-weight-bold'>
+            <strong>{heading}</strong>
+          </p>
+          <h6>{info}</h6>
         </div>
       </div>
     </div>

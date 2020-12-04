@@ -1,20 +1,25 @@
-.trendsList {
-  padding: 10px;
-  position: relative;
+.triendsList {
+  display: flex;
 }
 
-.trendsList__body {
-  padding: 15px;
+.triendsList__body {
+  position: relative;
+  border-top: 1px solid #eff1f2;
 }
 
 .trendsList__icon {
   position: absolute;
-  top: 10;
+  top: 10px;
   right: 0;
+  font-size: x-large;
   color: gray;
 }
 
-.trendsList__contents {
-  /* padding: 10px; */
-  margin-top: -5px;
+.trendsList__title svg {
+  color: var(--twitter-color);
+  font-size: x-large;
+}
+
+.trendsList__top h6 {
+  margin-top: 10px;
 }

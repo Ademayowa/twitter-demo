@@ -1,7 +1,6 @@
 .whoToFollow {
   padding: 15px;
   background-color: #f5f8fa;
-  border-radius: 20px;
 }
 
 .whoToFollow__body {
@@ -15,10 +14,17 @@
   align-items: center;
 }
 
+.whoToFollow__userInfo h4 {
+  font-size: 16px;
+}
+
 .whoToFollow__userName {
   margin-left: 15px;
 }
 
+.whoToFollow__userName h4 {
+  margin: 0;
+}
 .whoToFollow__userHandle {
   color: gray;
   font-weight: unset;
@@ -30,11 +36,16 @@
   justify-content: flex-end;
 }
 
-.whoToFollow__button > button {
+.btn__follow {
   border-radius: 20px !important;
-  border: 1px solid var(--twitter-color);
-  color: var(--twitter-color);
   text-transform: capitalize;
-  font-family: 'Nunito', sans-serif !important;
-  font-weight: 600;
+  padding: 5px 15px;
+  font-weight: 700;
+  border: 1px solid var(--twitter-color);
+  background-color: initial;
+}
+
+.btn__follow:hover,
+.btn__follow:focus {
+  outline-width: 0;
 }

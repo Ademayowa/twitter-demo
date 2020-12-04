@@ -1,28 +1,29 @@
 import React from 'react';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import HomeIcon from '@material-ui/icons/Home';
-import AcUnitIcon from '@material-ui/icons/AcUnit';
-import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import BlurCircularIcon from '@material-ui/icons/BlurCircular';
-import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { BiHomeCircle, BiEnvelope } from 'react-icons/bi';
+import { BsHash, BsBookmark, BsCardText, BsPerson } from 'react-icons/bs';
+import { IoMdNotificationsOutline, IoLogoTwitter } from 'react-icons/io';
+import { CgMoreO } from 'react-icons/cg';
 import SidebarOption from '../SidebarOption/SidebarOption';
 import './Sidebar.css';
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <TwitterIcon className='sidebar__twitterIcon' />
-      <SidebarOption active Icon={HomeIcon} text='Home' />
-      <SidebarOption Icon={AcUnitIcon} text='Explore' />
-      <SidebarOption Icon={NotificationsNoneIcon} text='Notifications' />
-      <SidebarOption Icon={MailOutlineIcon} text='Messages' />
-      <SidebarOption Icon={PermIdentityIcon} text='Profile' />
-      <SidebarOption Icon={BlurCircularIcon} text='More' />
-      <Button variant='outlined' className='sidebar__tweet'>
+      <Link>
+        <IoLogoTwitter className='sidebar__twitterIcon' />
+      </Link>
+      <SidebarOption text='Home' Icon={BiHomeCircle} active />
+      <SidebarOption text='Explore' Icon={BsHash} />
+      <SidebarOption text='Notifications' Icon={IoMdNotificationsOutline} />
+      <SidebarOption text='Messages' Icon={BiEnvelope} />
+      <SidebarOption text='Bookmarks' Icon={BsBookmark} />
+      <SidebarOption text='Lists' Icon={BsCardText} />
+      <SidebarOption text='Profile' Icon={BsPerson} />
+      <SidebarOption text='More' Icon={CgMoreO} />
+      <button className='btn btn-primary btn-block sidebar__tweet'>
         Tweet
-      </Button>
+      </button>
     </div>
   );
 };

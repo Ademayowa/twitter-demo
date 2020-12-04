@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, Avatar } from '@material-ui/core';
-import PhotoAlbumSharpIcon from '@material-ui/icons/PhotoAlbumSharp';
-import GifOutlinedIcon from '@material-ui/icons/GifOutlined';
-import BarChartSharpIcon from '@material-ui/icons/BarChartSharp';
-import SentimentSatisfiedSharpIcon from '@material-ui/icons/SentimentSatisfiedSharp';
-import InsertInvitationOutlinedIcon from '@material-ui/icons/InsertInvitationOutlined';
+import {
+  AiFillPicture,
+  AiOutlineFileGif,
+  AiOutlineSmile,
+  AiOutlineCalendar,
+} from 'react-icons/ai';
+import { GoGraph } from 'react-icons/go';
 import './TweetBox.css';
 
 const TweetBox = () => {
@@ -12,22 +13,30 @@ const TweetBox = () => {
     <div className='tweetBox'>
       <form>
         <div className='tweetBox__input'>
-          <Avatar src='https://lh3.googleusercontent.com/a-/AOh14GgQlroOAakNgNB063ACkOtloRLtl7D0iC7Zzz7SCw' />
+          <img
+            src='https://images.unsplash.com/photo-1508341591423-4347099e1f19?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bWVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+            alt=''
+            style={{
+              width: '50px',
+              borderRadius: '40px',
+              height: '50px',
+              objectFit: 'cover',
+            }}
+          />
           <input type='text' placeholder={`What's happening?`} />
-          <button type='submit'>hide button</button>
         </div>
 
         <div className='tweetBox__bottom'>
           <div className='tweetBox__icons'>
-            <PhotoAlbumSharpIcon />
-            <GifOutlinedIcon className='tweetBox__fontSize' />
-            <BarChartSharpIcon />
-            <SentimentSatisfiedSharpIcon />
-            <InsertInvitationOutlinedIcon />
+            <AiFillPicture />
+            <AiOutlineFileGif />
+            <GoGraph />
+            <AiOutlineSmile />
+            <AiOutlineCalendar />
           </div>
-          <Button className='tweetBox__tweetButton' type='submit'>
+          <button type='submit' className='btn btn-primary btn-sm'>
             Tweet
-          </Button>
+          </button>
         </div>
       </form>
     </div>

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
-import { Avatar } from '@material-ui/core';
 import './WhoToFollow.css';
 
 const WhoToFollow = ({ img, name, verified, handle, src }) => {
@@ -8,17 +6,22 @@ const WhoToFollow = ({ img, name, verified, handle, src }) => {
     <div className='whoToFollow'>
       <div className='whoToFollow__body'>
         <div className='whoToFollow__avatar'>
-          <Avatar src={src} />
+          <img
+            alt=''
+            src={src}
+            className='rounded-circle'
+            style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+          />
         </div>
 
         <div className='whoToFollow__userInfo'>
           <div className='whoToFollow__userName'>
-            <h4>{name}</h4>
-            <h4 className='whoToFollow__userHandle '>@{handle}</h4>
+            <h4 className='font-weight-bold'>{name}</h4>
+            <h4 className='whoToFollow__userHandle'>@{handle}</h4>
           </div>
 
           <div className='whoToFollow__button'>
-            <Button variant='outlined'>Follow</Button>
+            <button className='btn__follow'>Follow</button>
           </div>
         </div>
       </div>

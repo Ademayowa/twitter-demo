@@ -1,80 +1,46 @@
 .tweetBox {
-  padding-bottom: 10px;
-  border-bottom: 8px solid var(--twitter-background);
-  padding-right: 10px;
-}
-
-.tweetBox > form {
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  border-bottom: 10px solid var(--twitter-background);
 }
 
 .tweetBox__input {
-  padding: 20px;
+  padding: 5px;
   display: flex;
 }
 
-.tweetBox__input > input {
-  outline-width: 0;
-  font-family: 'Nunito', sans-serif;
+.tweetBox__input svg {
+  font-size: 36px;
 }
 
-.tweetBox__imageInput {
-  outline-width: 0;
-  font-family: 'Nunito', sans-serif;
-  font-size: 18px;
-  margin-left: 70px;
-}
-
-.tweetBox__imageInput {
+.tweetBox__input input {
   border: none;
-  padding: 10px;
-}
-
-.tweetBox__input > input {
-  flex: 1;
-  margin-left: 20px;
   font-size: 20px;
-  border: none !important;
-}
-
-.tweetBox__input > button {
-  display: none !important;
+  margin-left: 5px;
+  outline-width: 0;
 }
 
 .tweetBox__bottom {
   display: flex;
-  padding: 0 10px;
-  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .tweetBox__icons {
   display: flex;
-  flex: 0.8;
-  padding: 0 68px;
-  justify-content: space-between;
+  align-items: center;
   color: var(--twitter-color);
+  font-size: x-large;
+  padding: 5px 38px;
 }
 
-.tweetBox__fontSize {
-  font-size: xx-large !important;
+.tweetBox__icons svg {
+  margin: 0 10px;
 }
 
-.tweetBox__tweetButton {
+.tweetBox__bottom button {
   background-color: #8ed0f9 !important;
-  border: none !important;
-  color: white !important;
-  font-weight: 900 !important;
-  text-transform: inherit !important;
   border-radius: 30px !important;
-  width: 80px;
-  height: 40px !important;
-  font-family: 'Nunito', sans-serif !important;
-  margin-left: auto !important;
-}
-
-@media (max-width: 700px) {
-  .tweetBox__icons {
-    display: none !important;
-  }
+  font-weight: 800;
+  font-size: 14px !important;
+  text-transform: capitalize;
 }
